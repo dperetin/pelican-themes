@@ -4,6 +4,13 @@
 by <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
 {% endif %} 
 
+{% if article.translations %}
+Translations: 
+    {% for translation in article.translations %}
+        <a href="{{ SITEURL }}/{{ translation.url }}">{{ translation.lang }}</a>
+    {% endfor %}
+{% endif %}
+
 {# Filed under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> #}
 
 {# 
